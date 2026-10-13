@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # ==================================================
-# MODULE 1: ENVIRONMENT SETUP
+#  ENVIRONMENT SETUP
 # ==================================================
 
 # 0 = Free space, 1 = Obstacle, 2 = Goal
@@ -24,7 +24,7 @@ ROWS, COLS = grid.shape
 actions = [(-1, 0), (1, 0), (0, -1), (0, 1)]
 
 # ==================================================
-# MODULE 2: Q-LEARNING SETTINGS
+#  Q-LEARNING SETTINGS
 # ==================================================
 
 q_table = np.zeros((ROWS * COLS, len(actions)))
@@ -43,7 +43,7 @@ success_history = []
 reward_history = []
 
 # ==================================================
-# MODULE 3: HELPER FUNCTIONS
+# HELPER FUNCTIONS
 # ==================================================
 
 def state_number(position):
@@ -76,7 +76,7 @@ def take_action(position, action):
 
 
 # ==================================================
-# MODULE 4: TRAIN THE ROBOT
+# TRAIN THE ROBOT
 # ==================================================
 
 print("Training the robot...\n")
@@ -135,7 +135,7 @@ print("Total training episodes:", episodes)
 
 
 # ==================================================
-# MODULE 5: EVALUATE THE LEARNED ROBOT
+# EVALUATE THE LEARNED ROBOT
 # ==================================================
 
 def evaluate_robot():
@@ -189,7 +189,7 @@ success_rate = evaluate_robot()
 
 
 # ==================================================
-# MODULE 6: DISPLAY THE LEARNED ROUTE
+# DISPLAY THE LEARNED ROUTE
 # ==================================================
 
 def find_route():
@@ -231,7 +231,7 @@ else:
 
 
 # ==================================================
-# MODULE 7: VISUALIZE THE RESULTS
+# VISUALIZE THE RESULTS
 # ==================================================
 
 fig, axes = plt.subplots(1, 2, figsize=(12, 5))
